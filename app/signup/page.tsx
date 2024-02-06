@@ -9,7 +9,7 @@ export default function SignupPage() {
           <Image src="/images/Weeho.png" alt="Logo" width={130} height={50} />
         </div>
         <form action="signup.php" method="post" className="space-y-4">
-          <h2 className="text-2xl font-bold text-center">Create new account</h2>
+          <h2 className="text-2xl font-bold text-center">Signup</h2>
           <div className="flex items-center border border-gray-300 rounded-full px-3 py-2">
             <Image src="/images/user.png" alt="" width={24} height={24} />
             <input type="text" name="name" id="name" placeholder="Name" className="flex-1 bg-transparent outline-none px-2" />
