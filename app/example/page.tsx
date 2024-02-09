@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
+import next from 'public/2nd.jpg';
 export default function Home() {
   return (
     <>
