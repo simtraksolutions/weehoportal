@@ -14,8 +14,9 @@ export default function Home() {
         <header className="flex justify-between items-center py-6">
           <div className="flex items-center space-x-4">
             <Image src="/images/Weeho.png" alt="Logo" width={50} height={50} className="rounded-full" />
-            <h1 className="text-2xl font-bold">Naviin Gandharv</h1>
+       
           </div>
+          <h1 className="text-2xl font-bold  flex justify-center">Naviin Gandharv</h1>
           <div className="w-10 h-10">
             <Image src="/images/profile-icon.jpeg" alt="Profile Icon" width={40} height={40} className="rounded-full" />
           </div>

@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS reset */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color variables */
+.light {
+    --mainColor: #F05407;
+    --hoverColor: #A30F0F;
+    --backgroundColor: #fff;
+    --darkOne: #000;
+    --darkTwo: #000;
+    --lightOne: #dec1c1;
+    --lightTwo: #000;
+}
+
+.dark {
+    --mainColor: #F05407;
+    --hoverColor: #A30F0F;
+    --backgroundColor: #000;
+    --darkOne: #fff;
+    --darkTwo: #fff;
+    --lightOne: #ccc;
+    --lightTwo: #fff;
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #f4f4f4;
+  font-family: 'poppins', sans-serif;
+}
+
+/* header.css */
+.site-header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.nav-menu ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffcc00;
+}
+
+.hamburger-menu {
+  display: none; /* Hide the hamburger menu on larger screens */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.links ul li:last-child {
+  margin-right: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffcc00;
+}
+
+/* Style the main content */
+.main {
+  padding-top: 80px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.hero-heading {
+  background-image: url('../images/backGimg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300%;
+  position: absolute;
+  height: auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  max-width: 300px; /* Adjust the max-width as needed to increase the size of the logo */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Updated CSS to style the sections and section-container */
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+.section {
+  flex: 0 0 calc(30% - 10px); /* 50% width for each section with some spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px; /* Added margin for a little space */
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.section .section-image {
+  height: 380px; /* You can adjust the height as needed */
+  object-fit: cover;
+}
+
+.show {
+  display: block;
+}
+
+/* Other styles for section content */
+.section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000; /* Set heading text color to black */
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000; /* Set paragraph text color to black */
+}
+
+.view-details {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+.box {
+  background-color: #f2f2f2; /* Set the background color of the box */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 8px; /* Round the corners */
+  padding: 20px; /* Add padding inside the box */
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Optional: Center the text */
+}
+
+.box h3 {
+  font-size: 24px; /* Adjust the heading font size */
+}
+
+.box img {
+  max-width: 100%; /* Ensure the image doesn't exceed the box width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.box p {
+  font-size: 16px; /* Adjust the paragraph font size */
+}
+
+@media (max-width: 768px) {
+  /* Show the hamburger menu icon on smaller screens */
+  .hamburger-menu {
+      display: block;
+      cursor: pointer;
+  }
+
+  /* Hide the regular nav menu on smaller screens */
+  .nav-menu ul {
+      display: none;
+  }
+}
