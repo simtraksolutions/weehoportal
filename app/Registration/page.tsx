@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
   const [name, setName] = useState("");
@@ -10,10 +11,10 @@ export default function SignupPage() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // console.log(name,phone,email,password,confirmPassword);
     try {
       await axios.post(
         "http://localhost:8080/signup",
@@ -30,14 +31,9 @@ export default function SignupPage() {
           },
         }
       );
-      alert("Signup successful. Please log in.");
-      setName("");
-      setPhone("");
-      setEmail("");
-      setPassword("");
-      setConfirmPassword("");
+      router.push("/login");
     } catch (error) {
-      alert((error as any).response.data.error);
+      alert((error as any).response.data.error || "Registration error");
     }
   };
 

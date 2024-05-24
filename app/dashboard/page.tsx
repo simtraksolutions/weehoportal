@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Dashboard() {
   return (
@@ -14,48 +15,48 @@ export default function Dashboard() {
         </div>
         <div className="flex justify-center gap-8"> {/* Added gap between items */}
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <a href="bookanevent.html">
+            <Link href="/Bookanevent">
               <div className="box">
                 <Image src="/images/bookanevent.jpeg" alt="bookanevent Icon" width={120} height={120} className="section-icon" />
                 <h3>Book an event</h3>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <a href="performers.html">
+            <Link href="/performers">
               <div className="box">
                 <Image src="/images/performers.jpeg" alt="performers Icon" width={120} height={130} className="section-icon" />
                 <h3 className='flex justify-center'>Performers</h3>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center mt-4"> {/* Adjusted margin top */}
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <a href="history.html">
+            <Link href="/history">
               <div className="box">
                 <Image src="/images/history.jpeg" alt="history Icon" width={120} height={130} className="section-icon" />
                 <h3>History</h3>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <a href="contactus.html">
+            <Link href="/contactus">
               <div className="box">
                 <Image src="/images/contactus.jpeg" alt="contactus Icon" width={120} height={130} className="section-icon" />
                 <h3 className='flex justify-center'>Contact us</h3>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center mt-4"> {/* Adjusted margin top */}
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <a href="login.html">
+            <Link href="/logout">
               <div className="box">
                 <Image src="/images/logout.jpeg" alt="Logout Icon" width={120} height={130} className="section-icon" />
                 <h3 className='flex justify-center'>Logout</h3>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
