@@ -32,7 +32,7 @@ export default function Home() {
           <p className="text-base text-gray-600 my-4">
             WEEHO provides a robust online platform to showcase your skills && whether it be singing, dancing, playing any instrument, or any other performing arts. Our platform is accessible to people from all walks of life, and we are always on the lookout for new and exciting talents to feature on our online platform.
           </p>
-          <a href="bookanevent.html" className="inline-block bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full my-4">Book an Event</a>
+          <a href="/Bookanevent" className="inline-block bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full my-4">Book an Event</a>
         </section>
 
         {/* About Naviin Gandharv Section */}

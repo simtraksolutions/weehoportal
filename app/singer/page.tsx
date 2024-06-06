@@ -1,12 +1,14 @@
 // pages/performers/singer/index.js
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SingerPage = () => {
   // Define singer data
   const singers = [
-    { name: 'Mandeep Singh', imageSrc: '/images/mandeep.jpg', className: 'singer1' },
-    { name: 'Rupali Bhattacharjee', imageSrc: '/images/rupali.jpg', className: 'singer2' },
-    { name: 'Naviin Gandharv', imageSrc: '/images/naviin.jpg', className: 'singer3' },
+    { name: 'Mandeep Singh', imageSrc: '/images/mandeep.jpg', className: 'singer1', slug: "mandeepsinger", },
+    { name: 'Rupali Bhattacharjee', imageSrc: '/images/rupali.jpg', className: 'singer2', slug: "rupalisinger", },
+    { name: 'Naviin Gandharv', imageSrc: '/images/naviin.jpg', className: 'singer3', slug: "Naviin", },
+    { name: "performer", imageSrc: "/images/performer.jpg", className: "singer4", slug: "performer", },
   ];
 
   return (
@@ -23,10 +25,12 @@ const SingerPage = () => {
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {singers.map((singer, index) => (
+            <Link key={index} href={`/${singer.slug}`} passHref>
             <div key={index} className={`bg-white rounded-2xl shadow p-4 flex flex-col items-center ${singer.className}`}>
               <Image src={singer.imageSrc} alt={singer.name} width={200} height={200} className="rounded-full" />
               <p className="mt-4 text-lg font-semibold">{singer.name}</p>
             </div>
+            </Link>
           ))}
         </div>
       </div>

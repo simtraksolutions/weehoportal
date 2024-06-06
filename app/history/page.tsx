@@ -13,6 +13,7 @@ interface Event {
   state: string;
   event_date: string;
   occasion: string;
+  performer_name: string;
 }
 
 export default function HistoryPage() {
@@ -87,6 +88,12 @@ export default function HistoryPage() {
             <Image src="/images/opportunity.png" alt="" width={24} height={24} />
             <span className="flex-1 bg-transparent outline-none px-2">
                   {event.occasion}
+            </span>
+          </div>
+          <div className="flex items-center px-3 py-2">
+            <Image src="/images/microphone.png" alt="Performer Name" width={24} height={24} />
+            <span className="flex-1 bg-transparent outline-none px-2">
+              {event.performer_name}
             </span>
           </div>
         </div>

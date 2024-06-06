@@ -12,6 +12,7 @@ export default function BookaneventPage() {
   const [state, setState] = useState("");
   const [event_date, setEventDate] = useState("");
   const [occasion, setOccasion] = useState("");
+  const [selectedPerformer, setSelectedPerformer] = useState("");
 
   const indianStates = [
     "Andhra Pradesh",
@@ -51,6 +52,15 @@ export default function BookaneventPage() {
     "Puducherry"
   ];
 
+  const performers = {
+    Actor: ["Actor1", "Actor2", "Actor3"],
+    Comedian: ["Comedian1", "Comedian2"],
+    Dancer: ["Dancer1", "Dancer2"],
+    Singer: ["Mandeep", "Naviin", "Rupali", "performer"],
+    Magician: ["Magician1", "Magician2"],
+    Musician: ["Musician1", "Musician2"],
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const token = localStorage.getItem("access_token");
@@ -70,6 +80,7 @@ export default function BookaneventPage() {
           state,
           event_date,
           occasion,
+          performer_name: selectedPerformer,
         },
         {
           headers: {
@@ -86,6 +97,7 @@ export default function BookaneventPage() {
       setState("");
       setEventDate("");
       setOccasion("");
+      setSelectedPerformer("");
     } catch (error) {
       alert((error as any).response?.data?.error || "Booking event error");
     }
@@ -144,6 +156,22 @@ export default function BookaneventPage() {
               <option value="Wedding">Wedding</option>
               <option value="Corporate Event">Corporate Event</option>
               <option value="Other">Other</option>
+            </select>
+          </div>
+          <div className="flex items-center border border-gray-300 rounded-full px-3 py-2">
+            <Image src="/images/list.png" alt="" width={24} height={24} />
+            <select name="performer" id="performer" className="flex-1 bg-transparent outline-none px-2" title="Select a Performer (Optional)"
+            value={selectedPerformer} onChange={(e) => setSelectedPerformer(e.target.value)} >
+              <option value="">Select a Performer (Optional)</option>
+              {Object.entries(performers).map(([category, names], index) => (
+                <optgroup key={index} label={category}>
+                  {names.map((name, idx) => (
+                    <option key={idx} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
             </select>
           </div>
           <button type="submit" className="w-full bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 rounded-full">Book now</button>

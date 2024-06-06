@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div className="mt-2">
-        <Link href="/your_booking_link">
+        <Link href="/Bookanevent">
           <button className="inline-block px-5 py-3 text-white text-sm bg-orange-500 rounded-md">Book this Event</button>
         </Link>
       </div>

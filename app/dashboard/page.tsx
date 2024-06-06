@@ -15,10 +15,10 @@ export default function Dashboard() {
         </div>
         <div className="flex justify-center gap-8"> {/* Added gap between items */}
           <div className="section flex flex-col items-center"> {/* Added flex and items-center */}
-            <Link href="/Bookanevent">
+            <Link href="/events">
               <div className="box">
                 <Image src="/images/bookanevent.jpeg" alt="bookanevent Icon" width={120} height={120} className="section-icon" />
-                <h3>Book an event</h3>
+                <h3>Events</h3>
               </div>
             </Link>
           </div>

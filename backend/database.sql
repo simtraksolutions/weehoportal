@@ -1,5 +1,7 @@
 create database weeho_db;
 use weeho_db;
+FLUSH PRIVILEGES;
+SET SQL_SAFE_UPDATES = 1;
 
 create table users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,7 +19,8 @@ CREATE TABLE events (
     city VARCHAR(255) NOT NULL,
     state VARCHAR(255) NOT NULL,
     event_date DATE NOT NULL,
-    occasion VARCHAR(255) NOT NULL
+    occasion VARCHAR(255) NOT NULL,
+    PERFORMER_NAME VARCHAR(255)
 );
 
 CREATE TABLE contact_us (
@@ -28,8 +31,17 @@ CREATE TABLE contact_us (
     message TEXT NOT NULL
 );
 
-flush privileges;
-
 select * from users;
 SELECT * FROM events;
 SELECT * FROM contact_us;
+
+CREATE TABLE PERFORMER_USERS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    PERFORMER_NAME VARCHAR(255) NOT NULL,
+    PERFORMER_PHONE VARCHAR(20) NOT NULL,
+    PERFORMER_EMAIL VARCHAR(255) NOT NULL UNIQUE,
+    PERFORMANCE VARCHAR(20) NOT NULL,
+    PASSWORD VARBINARY(255) NOT NULL
+);
+
+select * from performer_users;
